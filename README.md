@@ -53,7 +53,7 @@
  ![bat](./images/bateria.PNG)
 
 - **Motors Brushless 1000KV amb ESCs de 30A** – Propulsió i maniobrabilitat.
- ![motor](./images/motores.jpg)
+- ![motor](./images/motores.jpg)
 
 ---
 
