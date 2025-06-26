@@ -60,11 +60,7 @@
 ## 📊 Diagrama de flux
 ![diagramaFlux](./images/EsquemaSoftware.png)
 
-## 🧭 Arquitectura del Sistema de Vol Autònom
-
 Aquest diagrama representa el flux de treball del sistema de control autònom d’un dron basat en Raspberry Pi, ArduPilot i MAVLink, incloent fases de configuració, control i processament de vídeo.
-
-![Esquema del programari](EsquemaSoftware.png)
 
 ### 🧱 Components principals
 
@@ -73,7 +69,6 @@ Aquest diagrama representa el flux de treball del sistema de control autònom d�
 * **MAVLink**: Protocol de comunicació que connecta la Raspberry Pi amb la controladora de vol.
 * **Raspberry Pi**: Unitat de processament que executa el control autònom i el processament de vídeo en temps real.
 
----
 
 ### 🔀 Flux detallat
 
@@ -116,8 +111,6 @@ Aquest diagrama representa el flux de treball del sistema de control autònom d�
 9. **Desarmat**
 
    * Es desactiven els motors de manera segura després de l’aterratge.
-
----
 
 ### 🛠️ Notes addicionals
 
