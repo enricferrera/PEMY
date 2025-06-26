@@ -12,7 +12,7 @@ def estimate_distance(bbox_height):
         return float('inf')
     return (KNOWN_HEIGHT * FOCAL_LENGTH) / bbox_height
 
-def procesar_video(video_path, output_path="output_deteccion.mp4"):
+def procesar_video(video_path, output_path="output_deteccion.avi"):
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
         print("❌ Error al abrir el vídeo.")
