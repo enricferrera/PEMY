@@ -38,7 +38,7 @@
 ## 🔩 Components a destacar
 
 - **Raspberry Pi Zero 2 W** – Còr del sistema intel·ligent.
-- **Raspberry Pi Camera Module V2** – Enregistrament de vídeo i detecció visual.
+- **Raspberry Pi Camera UC-261 RGV.D** – Enregistrament de vídeo i detecció visual.
 - **Omnibus F4 V3S Plus** – Controladora de vol compatible amb ArduPilot.
 - **Mòdul GPS GY-NEO6MV2** – Localització en temps real.
 - **Bateria LiPo 7.4V** – Alimentació dels motors i controladora.
