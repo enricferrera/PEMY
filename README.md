@@ -60,6 +60,71 @@
 ## 📊 Diagrama de flux
 ![diagramaFlux](./images/EsquemaSoftware.png)
 
+## 🧭 Arquitectura del Sistema de Vol Autònom
+
+Aquest diagrama representa el flux de treball del sistema de control autònom d’un dron basat en Raspberry Pi, ArduPilot i MAVLink, incloent fases de configuració, control i processament de vídeo.
+
+![Esquema del programari](EsquemaSoftware.png)
+
+### 🧱 Components principals
+
+* **ArduPilot**: Firmware de control de vol carregat a la controladora (FC).
+* **Mission Planner (MP)**: Programari de configuració per calibrar sensors, definir paràmetres i preparar el dron abans del vol.
+* **MAVLink**: Protocol de comunicació que connecta la Raspberry Pi amb la controladora de vol.
+* **Raspberry Pi**: Unitat de processament que executa el control autònom i el processament de vídeo en temps real.
+
+---
+
+### 🔀 Flux detallat
+
+1. **Configuració a terra (Mission Planner)**
+
+   * **Calibratge**: Es calibren l'acceleròmetre, la brúxola, els giroscopis, els ESCs, etc.
+   * **Configurar paràmetres**: S’ajusten valors com el tipus de frame, funcions dels servos, failsafes i opcions com desactivar l'ús obligatori del GPS.
+
+2. **Inici a la Raspberry Pi**
+
+   * **Pre-flight checks**: Validació de paràmetres i sensors mitjançant MAVLink abans d’autoritzar l’armat.
+   * **Vídeo en directe**: El mòdul de càmera transmet vídeo en viu des del dron.
+   * **Processament de vídeo**: Algoritmes en Python detecten obstacles, seguiment visual o altres tasques de navegació assistida.
+
+3. **Canvi de mode de vol**
+
+   * S’estableix el mode de vol (com `STABILIZE`, `GUIDED_NOGPS`, etc.) amb comandes MAVLink.
+
+4. **Armat del dron**
+
+   * S’activen els motors per permetre el vol.
+   * Pot fer-se automàticament des de la Raspberry o manualment.
+
+5. **RC Override**
+
+   * La Raspberry controla directament el moviment del dron mitjançant override dels canals RC (throttle, pitch, roll, yaw).
+
+6. **Enlairament**
+
+   * El dron s’enlaira amb comandes programades o mitjançant una seqüència d’override.
+
+7. **Vol**
+
+   * Durant el vol, la Raspberry pot aplicar **correccions** en temps real, ja sigui per sensors o processament de vídeo.
+
+8. **Descens**
+
+   * S’inicia una maniobra d’aterratge suau, també mitjançant override o reducció del throttle.
+
+9. **Desarmat**
+
+   * Es desactiven els motors de manera segura després de l’aterratge.
+
+---
+
+### 🛠️ Notes addicionals
+
+* L’ús de **STABILIZE + RC override** permet vols autònoms sense necessitat de GPS ni radiocontrol.
+* El flux està dissenyat per funcionar amb drons configurats amb **sortides PWM estàndard (M1-M4)** i sense intervenció humana directa durant el vol.
+* Tot el sistema s’executa automàticament en iniciar la Raspberry, permetent un dron completament autònom.
+
 ---
 
 ## 🧩 Interconnexió entre dispositius
