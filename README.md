@@ -46,7 +46,7 @@
 - **Mòdul GPS GY-NEO6MV2** – Localització en temps real.
  ![gps](./images/GPS.jpg)
 - **Bateria LiPo 7.4V** – Alimentació dels motors i controladora.
- ![bat](./images/bateria.png)
+ ![bat](./images/bateria.PNG)
 - **Motors Brushless 1000KV amb ESCs de 30A** – Propulsió i maniobrabilitat.
  ![motor](./images/motores.jpg)
 
