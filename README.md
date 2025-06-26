@@ -65,6 +65,56 @@
 ## 🧩 Interconnexió entre dispositius
 ![diagramaHardware](./images/diagramaHardware.jpg)
 
+### 🔋 1. Bateria LiPo (7,4V - 2S)
+- **Funció:** Subministra energia a tot el sistema.
+- **Sortida:** 7,4 volts directes.
+
+### 🔌 2. Interruptor general (ON/OFF)
+- **Funció:** Permet tallar l'alimentació de manera segura.
+- **Connexió:**
+  - El pol positiu (+) de la bateria passa **primer** per l’interruptor.
+  - L'interruptor envia el corrent cap a una **plaqueta de distribució d’energia (PDB)** o directament als **ESCs** si no s’utilitza PDB.
+
+### ⚡ 3. Plaqueta de Distribució d’Energia (PDB) *(opcional però recomanada)*
+- **Funció:** Distribueix els 7,4V a diversos components amb estabilitat.
+- **Connexions típiques:**
+  - **4 sortides cap als ESCs** (Electronic Speed Controllers).
+  - **1 sortida cap al regulador de tensió (si cal) per a la Raspberry Pi**.
+
+### 🔄 4. ESCs (Electronic Speed Controllers) – 30A
+- **Funció:** Controlen els motors brushless segons els senyals rebuts des de la controladora de vol.
+- **Connexions de cada ESC:**
+  - **Entrada de potència:** (+) i (−) des de la PDB o directament des de la bateria.
+  - **Senyal (PWM):** Ve de la **controladora de vol (Omnibus F4 V3S Plus)**.
+  - **Sortida:** 3 fils cap al motor brushless corresponent.
+
+### ⚙️ 5. Motors brushless 1000KV
+- **Funció:** Proporcionen la propulsió del dron.
+- **Connexió:** 3 cables de fase per a cada motor que van directament a un ESC.
+- *Nota:* L'ordre dels cables pot afectar el sentit de gir (es pot invertir canviant dues fases).
+
+### 🧠 6. Controladora de vol - Omnibus F4 V3S Plus
+- **Funció:** Coordina els moviments del dron (rotació, estabilitat, etc.).
+- **Connexions:**
+  - **PWM OUT:** cap als 4 ESCs (un per motor).
+  - **UART/USB:** per comunicar-se amb la **Raspberry Pi** via MAVLink.
+  - **Connexió GPS:** entrada UART des del mòdul GPS.
+  - **Baròmetre intern i sensors IMU integrats.**
+
+### 📷 7. Raspberry Pi Zero 2 W
+- **Funció:** Executa l’algoritme de visió per computador (OpenCV) i envia ordres de moviment a la controladora de vol.
+- **Connexions:**
+  - **Port CSI:** per connectar la càmera Pi Camera V2.
+  - **Port UART (GPIOs):** per comunicar-se amb la controladora de vol (via MAVLink).
+  - **Alimentació:** mitjançant regulador de tensió de 5V si es vol alimentar directament des de la PDB o bateria.
+
+### 🛰️ 8. Mòdul GPS GY-NEO6MV2
+- **Funció:** Proporciona ubicació i velocitat al sistema.
+- **Connexió:**
+  - **Tx/Rx** a un port UART de la controladora de vol.
+  - **Alimentació:** 3.3V o 5V segons la versió (normalment 5V des de la mateixa placa F4).
+
+
 ---
 
 ## 🧠 Algorísmica
