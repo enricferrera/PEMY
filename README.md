@@ -39,14 +39,19 @@
 
 - **Raspberry Pi Zero 2 W** – Còr del sistema intel·ligent.
  ![rasp](./images/Raspberry.jpg)
+
 - **Raspberry Pi Camera UC-261 RGV.D** – Enregistrament de vídeo i detecció visual.
  ![cam](./images/Camera.jpg)
+
 - **Omnibus F4 V3S Plus** – Controladora de vol compatible amb ArduPilot.
  ![fc](./images/FC.jpg)
+
 - **Mòdul GPS GY-NEO6MV2** – Localització en temps real.
  ![gps](./images/GPS.jpg)
+
 - **Bateria LiPo 7.4V** – Alimentació dels motors i controladora.
  ![bat](./images/bateria.PNG)
+
 - **Motors Brushless 1000KV amb ESCs de 30A** – Propulsió i maniobrabilitat.
  ![motor](./images/motores.jpg)
 
