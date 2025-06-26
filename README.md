@@ -1,5 +1,19 @@
 # 🛸 PEMY - Dron Autònom Intel·ligent
 
+## 📚 Índex
+
+- [📌 Què és PEMY?](#-què-és-pemy)
+- [⚙️ Instal·lació del projecte](#️-instal·lació-del-projecte)
+- [💻 Programari utilitzat](#-programari-utilitzat)
+- [🔩 Components a destacar](#-components-a-destacar)
+- [📊 Diagrama de flux](#-diagrama-de-flux)
+- [🧩 Interconnexió entre dispositius](#-interconnexió-entre-dispositius)
+- [🧠 Algorísmica](#-algorísmica)
+  - [🎯 Objectiu](#objectiu)
+  - [📈 Passos](#passos)
+  - [📋 Exemple d’instruccions generades](#exemple-dinstruccions-generades)
+- [🎥 Resultat final](#-resultat-final)
+
 ## 📌 Què és PEMY?
 
 **PEMY** és un projecte de robòtica que té com a objectiu la construcció d’un **dron autònom** capaç de **seguir una persona vestida amb roba vermella**, **gravar vídeo** i **mantenir una distància òptima** mitjançant **visió per computador** i control dinàmic del vol. Tot el sistema funciona de manera independent i pot adaptar-se a diferents entorns sense necessitat d’intervenció manual.
