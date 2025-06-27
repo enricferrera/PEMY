@@ -294,7 +294,7 @@ Aquestes dades es poden traduir a ordres MAVLink perquè el dron realitzi els aj
 
 El vídeo processat conté totes les anotacions visuals i es desa automàticament al directori. Aquest arxiu serveix com a eina de validació per comprovar la precisió de la detecció i la resposta algorísmica del sistema.
 
-👉 [Ver demo en YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+👉 [Ver demo en YouTube](https://www.youtube.com/watch?v=1lI8Dspb6lc)
 
 #### Contribucions: 
 - Fernando Luis Vilareño
