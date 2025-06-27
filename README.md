@@ -3,7 +3,7 @@
 ## 📚 Índex
 
 - [📌 Què és PEMY?](#-què-és-pemy)
-- [⚙️ Instal·lació del projecte](#️-instal·lació-del-projecte)
+- [🚀 Com utilitzar](#️-Com-utilitzar)
 - [💻 Programari utilitzat](#-programari-utilitzat)
 - [🔩 Components a destacar](#-components-a-destacar)
 - [📊 Diagrama de flux](#-diagrama-de-flux)
@@ -17,25 +17,6 @@
 ## 📌 Què és PEMY?
 
 **PEMY** és un projecte de robòtica que té com a objectiu la construcció d’un **dron autònom** capaç de **seguir una persona vestida amb roba vermella**, **gravar vídeo** i **mantenir una distància òptima** mitjançant **visió per computador** i control dinàmic del vol. Tot el sistema funciona de manera independent i pot adaptar-se a diferents entorns sense necessitat d’intervenció manual.
-
----
-# 🛩️ Projecte de Control Autònom de Dron amb Raspberry Pi
-
-Aquest projecte permet controlar un dron des d'una Raspberry Pi utilitzant MAVLink i pymavlink, sense necessitat de GPS ni radiocontrol, mitjançant el mode STABILIZE i RC override.
-
----
-
-## 📊 Diagrama de Flux de Control
-
-Aquest diagrama mostra el flux lògic que segueix el sistema:
-
-1. **Inici del sistema**: En engegar la Raspberry Pi, s'executa automàticament el script de vol si està configurat.
-2. **Connexió amb la Flight Controller (FC)**: Mitjançant el port UART `/dev/serial0` i MAVLink.
-3. **Armat del dron**: Es comprova si el dron està llest per armar-se. Si falla, es reporten els errors.
-4. **Control de vol**: Mitjançant RC override (control de motors via MAVLink), el dron s'enlaira, es manté i posteriorment aterra.
-5. **Desarmat del dron**: Finalització segura del vol.
-
-Aquest esquema és ideal per vols simples en entorns controlats.
 
 ---
 
@@ -68,7 +49,6 @@ pip3 install pymavlink mavproxy
 
 * El port per defecte és `/dev/serial0` a `57600` bauds (configurable segons el cablejat).
 
----
 
 ### 2️⃣ Connexió amb la Flight Controller (FC)
 
@@ -80,14 +60,12 @@ mavproxy.py --master=/dev/serial0 --baudrate 57600 --aircraft myCopter
 
 Si reps el missatge `Got HEARTBEAT`, la connexió és correcta.
 
----
-
 ### 3️⃣ Execució d’un script de vol
 
 Per executar qualsevol dels scripts de vol, per exemple, per fer un petit enlairament i aterratge automàtic:
 
 ```bash
-python3 vol_baix.py
+python3 fly_stabilize_rc.py
 ```
 
 Aquest script:
@@ -107,19 +85,6 @@ Aquest script:
 * `armar_dron.py`: Arma el dron automàticament.
 * `check_arm_status.py`: Mostra l’estat de l’armat i missatges d’error si no s’arma.
 * `desarmar.py`: Desarma el dron de manera segura.
-
----
-
-## 📬 Contacte i crèdits
-
-Creat per \[El teu nom o equip], 2025.
-Basat en MAVLink, pymavlink i ArduPilot.
-
----
-
-Vols que afegeixi una secció per documentar cada script? O crear un script d’instal·lació automàtica?
-
-
 
 ---
 
