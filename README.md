@@ -3,7 +3,7 @@
 ## 📚 Índex
 
 - [📌 Què és PEMY?](#-què-és-pemy)
-- [🚀 Com utilitzar](#️-Com-utilitzar)
+- [🚀 Com utilitzar](#️-com-utilitzar)
 - [💻 Programari utilitzat](#-programari-utilitzat)
 - [🔩 Components a destacar](#-components-a-destacar)
 - [📊 Diagrama de flux](#-diagrama-de-flux)
